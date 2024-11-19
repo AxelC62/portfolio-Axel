@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Axel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <h1>Axel Charlot</h1>
+            <ul class="nav-links">
+                <li><a href="#hero">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="">CV</a></li>
+                
+            </ul>
+            <button class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Bienvenue sur mon portfolio</h2>
+            <p>Développeur passionné en quête de nouveaux défis.</p>
+            
+        </div>
+    </section>
+
+    <!-- À propos Section -->
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <div class="about-container">
+            <!-- Photo de profil -->
+            <img src="img/axel.jpg" alt="Photo de [Ton Nom]" class="profile-photo">
+            
+            <!-- Texte descriptif -->
+            <div class="about-text">
+                <p>Je suis actuellement étudiant en BTS SIO SISR au lycée Guy Mollet, passionné par l'informatique et les nouvelles technologies. Mon objectif est de devenir un consultant en cybersécurité.</p>
+                <p>J'ai acquis des compétences solides en Administration réseaux, en devellopement système comme la bash et le powershell, et j'aime relever de nouveaux défis qui me permettent d'apprendre et d'acquerrir de nouvelle compétances'.</p>
+                
+                <!-- Liste d'informations -->
+                <ul class="info-list">
+                    <li>Compétences en développement orientés systèmes (bash, powershell)</li>
+                    <li>Compétences en virtualisation (Vmware, Proxmox, VirtualBox)</li>
+                    <li>Capacité à résoudre des problèmes complexes et à travailler en équipe</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets Section -->
+    <section id="projects">
+        <h2>Mes Projets</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Install Pluxml </h3>
+                <p>J'ai créer un script en bash permettant d'installer PluXml sur Debian 11 et de le configurer sans vous soucier de quoi que ce soit. Cela me permet de de gagner du temps sur l'installation.</p>
+                <a href="https://github.com/AxelC62/install-pluxml" class="btn">En savoir plus</a> <!-- Texte ajouté ici -->
+            </div>
+            <div class="project-card">
+                <h3>Configuration d'un serveur Proxmox</h3>
+                <p>J'ai mis en place un serveur Proxmox chez moi pour centraliser la gestion de mes machines virtuelles, optimiser mes ressources et explorer les possibilités de virtualisation.</p>
+                <a href="#" class="btn">En savoir plus</a> <!-- Texte ajouté ici -->
+            </div>
+            <div class="project-card">
+                <h3>Install Wordpress</h3>
+                <p>Script permettant d'installer wordpress et de le configurer sans vous soucier de quoi que ce soit. Vous aurez juste à mettre le nom de votre base de données, votre non d'utilisateur et votre mot de passe que vous souhaitez.</p>
+                <a href="#" class="btn">En savoir plus</a> <!-- Texte ajouté ici -->
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- CV Section -->
+    <section id="cv-section">
+        <h2>Mon CV</h2>
+        <a href="pdf/Axel CHARLOT.pdf" class="download-btn" download>Télécharger mon CV</a>
+    </section>
+    
+    <!-- Certifications Section -->
+    <section id="contact" style="padding: 2rem 0;">
+        
+        <div class="map-full">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9992167161273!2d2.2922925156739195!3d48.8588444792877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fdf2dd2c3f7%3A0xe816cfb16e5ab4ce!2sEiffel%20Tower!5e0!3m2!1sen!2sfr!4v1616430985243!5m2!1sen!2sfr"
+                width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+    
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

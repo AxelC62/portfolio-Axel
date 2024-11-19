@@ -1,0 +1,367 @@
+/* RESET GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Couleurs */
+:root {
+    --primary-color: #000000;   /* Violet */
+    --secondary-color: #ff00a2; /* Turquoise */
+    --text-color: #333;
+    --background-color: #ffffff;
+    --button-color: #6200ea;
+}
+
+/* NAVIGATION */
+header {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+nav h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Menu Hamburger */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li {
+    padding: 5px 10px;
+}
+
+.nav-links.show {
+    display: flex;
+}
+
+/* Sections */
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/* Section Hero */
+#hero {
+    background: linear-gradient(135deg, rgba(136, 1, 1, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('img/fond.jpg') center/cover no-repeat; /* Assure-toi du bon chemin ici */
+    color: #fff;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 6%; /* Ajuste cette valeur si nécessaire */
+    flex-direction: column;
+}
+
+
+.hero-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+
+
+.cta-button:hover {
+    background-color: #018786;
+}
+
+#about {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;  /* Fond clair pour mieux séparer cette section */
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+#about .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+#about .profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    object-fit: cover;
+    margin-bottom: 1.5rem; /* Espacement entre la photo et le texte sur petits écrans */
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;  /* Texte légèrement gris pour plus de confort visuel */
+    max-width: 600px;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+#about .info-list {
+    margin-top: 1.5rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+#about .info-list li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#about .info-list li::before {
+    content: "✔️";
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+/* Section des projets */
+#projects {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Effet de survol (hover) */
+.project-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Titre du projet */
+.project-card h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Description du projet */
+.project-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Bouton pour voir plus de détails */
+.project-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+    color: #1d6fa5;
+}
+
+/* Style général des boutons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+   
+    color: #ffffff; /* Couleur du texte en blanc */
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Effet au survol (hover) */
+.btn:hover {
+    color: #ffffff; /* Assure que le texte reste en blanc au survol */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Section Mon CV */
+#cv-section {
+    background-color: #f3f6fa; /* Couleur douce et agréable */
+    text-align: center;
+    padding: 3rem 1rem; /* Espacement plus généreux */
+    margin: 0 auto;
+}
+
+#cv-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+#cv-section .download-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background: linear-gradient(90deg, #007bff, #0056d2); /* Dégradé moderne */
+    border: none;
+    border-radius: 8px; /* Coins arrondis */
+    text-decoration: none; /* Pas de soulignement */
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre élégante */
+    transition: all 0.3s ease;
+}
+
+#cv-section .download-btn:hover {
+    background: linear-gradient(90deg, #0056d2, #007bff); /* Effet de dégradé inversé */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+    transform: translateY(-3px); /* Léger effet de "hover" */
+    cursor: pointer;
+}
+
+
+/* Style global pour la section Contact */
+#contact {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 2rem 0;
+    margin: 0;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Style pour la carte */
+.map-full {
+    width: 95%; /* Occupe 95% de la largeur de l'écran */
+    margin: 0 auto; /* Centre la carte */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Coins arrondis */
+    overflow: hidden;
+}
+
+.map-full iframe {
+    width: 100%; /* S'étend selon le conteneur */
+    height: 500px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .map-full iframe {
+        height: 300px; /* Réduit la hauteur sur les petits écrans */
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
